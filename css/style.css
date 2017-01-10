@@ -4,16 +4,28 @@
 body {
   color: #878787;
   margin: 0;
-  font-size: 1em;
+  /*font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; */
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* shorthand properties to write all the font properties in one value
+  font stack to ensure fonts are shown b/c some users may not have some fonts
+  available to them
+  */
 }
 
 h1 {
   font-size: 5.625rem; /* 90px / 16px = 5.625em */
-  color: white;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
 }
 
 h2 {
   font-size: 53px;
+  text-decoration: underline;
+  font-weight: normal;
 }
 
 h3 {
@@ -21,18 +33,46 @@ h3 {
   color: #48525c;
 }
 
+p {
+
+}
+
+ /* Pseudo-Classes */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4); /* alpha value to make orange transparent */
+}
+
+a:active { /* for elements that are activated */
+  color: lightcoral;
+}
+
+:focus { /* selects any interactive element nagivating a site using a keyboard */
+  color: white;
+  background-color: orange;
+}
+
 /* ID Selectors */
 
 #main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  border-bottom: solid 10px orange;
+  border-bottom: solid 10px #ffa949;
 }
 
  /* Class Selectors */
 
  .main-header {
-   background-color: orange;
+   background-color: #ffa949;
  }
 
  .title {
@@ -45,7 +85,7 @@ h3 {
   width: 60%;
 }
 
- .primary-content {
+ .primary-content, .main-header {
    text-align: center;
  }
 
@@ -59,27 +99,4 @@ ol li {
   background-color: tomato;
   color: white;
   margin-bottom: 5px;
-}
-
- /* Pseudo-Classes */
-
-a:link {
-  color: orange;
-}
-
-a:visited {
-  color: lightblue;
-}
-
-a:hover {
-  color: forestgreen;
-}
-
-a:active { /* for elements that are activated */
-  color: lightcoral;
-}
-
-:focus { /* selects any interactive element nagivating a site using a keyboard */
-  color: white;
-  background-color: orange;
 }
