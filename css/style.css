@@ -1,15 +1,14 @@
 
+/* Type Selector */
+
 body {
   color: #878787;
   margin: 0;
-}
-
-.main-header {
-  background-color: orange;
+  font-size: 1em;
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 5.625rem; /* 90px / 16px = 5.625em */
   color: white;
 }
 
@@ -22,16 +21,65 @@ h3 {
   color: #48525c;
 }
 
-.primary-content {
-  text-align: center;
-}
-
-.secondary-content {
-  border-top: 2px solid lightgrey;
-}
+/* ID Selectors */
 
 #main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   border-bottom: solid 10px orange;
+}
+
+ /* Class Selectors */
+
+ .main-header {
+   background-color: orange;
+ }
+
+ .title {
+   color: white;
+   font-size: 1.625rem; /* 26px / 16px = 1.625em converting px values to em's */
+  }
+
+.primary-content,
+.secondary-content {
+  width: 60%;
+}
+
+ .primary-content {
+   text-align: center;
+ }
+
+ .t-border {
+   border-top: 2px solid lightgrey;
+ }
+
+ /* Descendant Selectors */
+
+ol li {
+  background-color: tomato;
+  color: white;
+  margin-bottom: 5px;
+}
+
+ /* Pseudo-Classes */
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: forestgreen;
+}
+
+a:active { /* for elements that are activated */
+  color: lightcoral;
+}
+
+:focus { /* selects any interactive element nagivating a site using a keyboard */
+  color: white;
+  background-color: orange;
 }
