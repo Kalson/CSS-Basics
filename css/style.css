@@ -89,9 +89,10 @@ a:active { /* for elements that are activated */
  /* Class Selectors */
 
  .main-header {
-   background-color: #ffa949;
    padding-top: 170px;
    height: 850px;
+   background: #ffa949 url('../img/mountains.jpg') no-repeat center / cover;
+   /* / is to separate the size from the position value for the background */
  }
 
  .title {
@@ -154,8 +155,27 @@ ol li {
   padding: 18% 24%;
   border-top: 10px solid #ffa949;
   margin: 105px 0 60px;
+  background-image: url("../img/bear.jpg");
+  background-size: cover; /* for full image while maintaing width & height porportions */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .arrow {
   width: 50px;
+}
+
+/* Floated Columns -------------------------------------- */
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: right; /* float div to the right side */
+}
+
+.resorts {
+  float: left; /* float div to the left side */
 }
