@@ -23,19 +23,25 @@ h1 {
 }
 
 h2 {
-  font-size: 53px;
-  text-decoration: underline;
+  font-size: 3.3125em; /* 53px/16px */
   font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: .5em; /* "26px"/53px, so .5em = 26px */
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25em; /* 20px/16px */
   color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px/30px */
 }
 
-p {
-
-}
+/*li {
+  display: inline-block;
+  padding: 0 12px;
+  border-right: solid 1px;
+  margin: 80px 0;
+}*/
 
  /* Pseudo-Classes */
 
@@ -61,6 +67,8 @@ a:active { /* for elements that are activated */
   background-color: orange;
 }
 
+/* Main Styles -------------------------------------- */
+
 /* ID Selectors */
 
 #main-footer {
@@ -80,13 +88,32 @@ a:active { /* for elements that are activated */
    font-size: 1.625rem; /* 26px / 16px = 1.625em converting px values to em's */
   }
 
-.primary-content,
-.secondary-content {
-  width: 60%;
-}
+  .intro {
+    font-size: 1.25em; /* 20px/16px */
+    line-height: 1.6;
+  }
 
- .primary-content, .main-header {
+ .primary-content, .main-header, #main-footer {
    text-align: center;
+ }
+
+ .primary-content {
+ 	padding-top: 25px;
+  padding-bottom: 95px;
+ }
+
+ .secondary-content {
+ 	padding-top: 80px;
+ 	padding-bottom: 70px;
+   border-bottom: 2px solid #dfe2e6;
+ }
+
+ .callout {
+   font-size: 1.25em;
+   border-bottom: 3px solid;
+   padding: 0 9px 3px;
+   margin-top: 20px;
+   display: inline-block;
  }
 
  .t-border {
@@ -96,7 +123,21 @@ a:active { /* for elements that are activated */
  /* Descendant Selectors */
 
 ol li {
-  background-color: tomato;
-  color: white;
   margin-bottom: 5px;
+}
+
+/* Layout Styles -------------------------------------- */
+
+.primary-content,
+.secondary-content {
+  width: 60%;
+  margin: auto;
+}
+
+.wildlife {
+  color: white;
+  background-color: #434a52;
+  padding: 18% 24%;
+  border-top: 10px solid #ffa949;
+  margin: 105px 0 60px;
 }
