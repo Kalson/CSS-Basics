@@ -47,6 +47,15 @@ h3 {
   margin: 80px 0;
 }*/
 
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 img {
   max-width: 100%; /* for responsive imagery */
   margin-bottom: 20px;
@@ -117,7 +126,9 @@ a:active { /* for elements that are activated */
  .secondary-content {
  	padding-top: 80px;
  	padding-bottom: 70px;
-   border-bottom: 2px solid #dfe2e6;
+  border-bottom: 2px solid #dfe2e6;
+  /* overflow: auto; /* a simple way to clear floats */
+
  }
 
  .callout {
@@ -134,9 +145,9 @@ a:active { /* for elements that are activated */
 
  /* Descendant Selectors */
 
-ol li {
+/*ol li {
   margin-bottom: 5px;
-}
+}*/
 
 /* Layout Styles -------------------------------------- */
 
@@ -173,9 +184,21 @@ ol li {
 }
 
 .tips {
-  float: right; /* float div to the right side */
+  float: left; /* float div to the right side */
 }
 
 .resorts {
-  float: left; /* float div to the left side */
+  float: right; /* float div to the left side */
 }
+
+/* Float Clearfix -------------------------------------- */
+/* one of the best and most reliable methods for clearing floats */
+.group:after {
+  content: "";
+  display: table;
+  clear: both; /* the key to the clearfix */
+}
+/* what this clearfix does is, it generates a blank
+pseudo-element after the content of our div, with the class group
+The value, both, clears any collapsed space created by floats on
+both sides of the container */
