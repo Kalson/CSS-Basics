@@ -1,6 +1,10 @@
 
 /* Type Selector */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #878787;
   margin: 0;
@@ -43,6 +47,11 @@ h3 {
   margin: 80px 0;
 }*/
 
+img {
+  max-width: 100%; /* for responsive imagery */
+  margin-bottom: 20px;
+}
+
  /* Pseudo-Classes */
 
 a:link {
@@ -81,6 +90,8 @@ a:active { /* for elements that are activated */
 
  .main-header {
    background-color: #ffa949;
+   padding-top: 170px;
+   height: 850px;
  }
 
  .title {
@@ -130,8 +141,11 @@ ol li {
 
 .primary-content,
 .secondary-content {
-  width: 60%;
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: auto;
+  max-width: 900px;
 }
 
 .wildlife {
@@ -140,4 +154,8 @@ ol li {
   padding: 18% 24%;
   border-top: 10px solid #ffa949;
   margin: 105px 0 60px;
+}
+
+.arrow {
+  width: 50px;
 }
