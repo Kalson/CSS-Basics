@@ -1,3 +1,16 @@
+/* Web Fonts -------------------------------------- */
+
+@font-face {
+  font-family: 'Abolition Regular';
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+  /* here we're specifying alternate font-file formats for broader browser
+  support by using the src property and a URL value that links to the font file location.*/
+}
+
+/* Base Styles -------------------------------------- */
 
 /* Type Selector */
 
@@ -18,6 +31,11 @@ body {
   */
 }
 
+h1,
+h2 {
+  font-family: 'Abolition Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 h1 {
   font-size: 5.625rem; /* 90px / 16px = 5.625em */
   color: rgba(255, 255, 255, 1);
@@ -25,6 +43,7 @@ h1 {
   font-weight: normal;
   line-height: 1.3;
   text-shadow: 3px 5px 10px rgba(0, 0, 0, .8); /* horizontal, vertical, blur radius, color */
+  margin: 12px 0 0;
 }
 
 h2 {
@@ -102,13 +121,21 @@ a:active { /* for elements that are activated */
  .main-header {
    padding-top: 170px;
    height: 850px;
-   background: #ffa949 url('../img/mountains.jpg') no-repeat center / cover;
-   /* / is to separate the size from the position value for the background */
+   background:  linear-gradient(#ffa949, transparent 90%),
+                linear-gradient(0deg, #fff, transparent),
+                #ffa949 url('../img/mountains.jpg') no-repeat center / cover;
+   /* / is to separate the size from the position value for the background.
+   if we define a fully opaque background image or color, anywhere above
+   the bottom layer, it will cover up the background layers behind it. */
  }
 
  .title {
    color: white;
    font-size: 1.625rem; /* 26px / 16px = 1.625em converting px values to em's */
+   letter-spacing: .065em;
+   font-weight: 200;
+   border-bottom: 2px solid;
+   padding-bottom: 10px;
   }
 
   .intro {
@@ -173,7 +200,7 @@ a:active { /* for elements that are activated */
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 15px 15px 10px -5px rgba(0, 0, 0, .8),
-  inset 0 0 50px 10px rgba(0, 0, 0, .8);
+              inset 0 0 50px 10px rgba(0, 0, 0, .8);
   /* 4th length value in a box-shadow property is called the spread value,
 because it moves or spreads the shadow away from an element.
 inset is for the inner shadow (must be first or last in box shadow value)*/
@@ -183,6 +210,7 @@ inset is for the inner shadow (must be first or last in box shadow value)*/
 
 .arrow {
   width: 50px;
+  margin-top: 150px;
 }
 
 /* Floated Columns -------------------------------------- */
