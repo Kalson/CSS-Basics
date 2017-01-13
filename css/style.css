@@ -143,7 +143,9 @@ a:active { /* for elements that are activated */
     line-height: 1.6;
   }
 
- .primary-content, .main-header, #main-footer {
+ .primary-content,
+ .main-header,
+ #main-footer {
    text-align: center;
  }
 
@@ -155,7 +157,7 @@ a:active { /* for elements that are activated */
  .secondary-content {
  	padding-top: 80px;
  	padding-bottom: 70px;
-  border-bottom: 2px solid #dfe2e6;
+  border-bottom: 2px solid #dfe2e6; /* top border for footer */
   /* overflow: auto; /* a simple way to clear floats */
 
  }
@@ -169,7 +171,7 @@ a:active { /* for elements that are activated */
  }
 
  .t-border {
-   border-top: 2px solid lightgrey;
+   border-top: 2px solid lightgrey; /*top border for 1st and 2nd content */
  }
 
  /* Descendant Selectors */
@@ -239,3 +241,80 @@ inset is for the inner shadow (must be first or last in box shadow value)*/
 pseudo-element after the content of our div, with the class group
 The value, both, clears any collapsed space created by floats on
 both sides of the container */
+
+/* Media Queries -------------------------------------- */
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+  .title {
+    font-size: 1.3rem;
+    border: none;
+  }
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+  .arrow {
+    display: none;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+  #main-footer {
+    padding: 20px 0;
+  }
+}
+
+/*@media (max-width: 960px) {
+  body {
+    background: royalblue;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background: darkred;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+  body {
+    background: seagreen;
+  }
+  p {
+    color: white;
+  }
+}*/
+
+
+
+
+ /* we used max-width to check for the browser's viewport */
+/* media query is simply a style block containing one or various conditions.
+And, if those conditions are true, the media query takes effect. If they're
+false, the browser or device ignores them */
