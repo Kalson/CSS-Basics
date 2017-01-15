@@ -1,2 +1,2 @@
 # CSS-Basics
-Getting more in depth with CSS
+Using CSS to style the HTML with colors, backgrounds, font sizes, layout, and more
