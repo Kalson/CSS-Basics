@@ -38,7 +38,7 @@ h2 {
 
 h1 {
   font-size: 5.625rem; /* 90px / 16px = 5.625em */
-  color: rgba(255, 255, 255, 1);
+  /*color: rgba(255, 255, 255, 1);*/
   text-transform: uppercase;
   font-weight: normal;
   line-height: 1.3;
@@ -127,10 +127,10 @@ a:active { /* for elements that are activated */
    /* / is to separate the size from the position value for the background.
    if we define a fully opaque background image or color, anywhere above
    the bottom layer, it will cover up the background layers behind it. */
+   color: white;
  }
 
  .title {
-   color: white;
    font-size: 1.625rem; /* 26px / 16px = 1.625em converting px values to em's */
    letter-spacing: .065em;
    font-weight: 200;
@@ -141,6 +141,10 @@ a:active { /* for elements that are activated */
   .intro {
     font-size: 1.25em; /* 20px/16px */
     line-height: 1.6;
+    /*color: initial;*/
+    /* initial displays the value that is designated as the property's initial
+    value. So the browser ignores the inheritance from the body element and
+    the intro's text color goes back to the initial value of black. */
   }
 
  .primary-content,
